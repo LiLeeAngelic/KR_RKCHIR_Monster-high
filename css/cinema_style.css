@@ -1,0 +1,98 @@
+main {
+   position: relative;
+   min-height: 100vh;
+   height:fit-content;
+   background: #eee;
+   color: #fff;
+   padding-bottom: 25px;
+}
+main h1 {
+   color: #000;
+   text-align: center;
+   padding: 15px;
+   font-size: 2em;
+   text-shadow: 5px 5px 5px #ff53b4;
+}
+
+main .cinema {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 30px;
+   justify-content: center;
+   padding: 10px;
+}
+
+main .cinema .video {
+   height: 455px;
+   width: 240px;
+   position: relative;
+   border-radius: 5px;
+   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+   cursor: pointer;
+   overflow: hidden;
+   background: #000;
+}
+
+main .cinema .video iframe {
+   display: none;
+}
+
+main .cinema .video h2 {
+   font-size: 25px;
+   text-align: center;
+   padding: 10px;
+}
+
+main .cinema .video img {
+   height: 79%;
+   width: 100%;
+   object-fit: cover;
+   transition: 0.2s linear;
+   border: 5px solid #fff;
+}
+
+main .cinema .video img:hover {
+   opacity: 0.3;
+}
+
+main .popup-video {
+   display: none;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 5;
+   background: rgba(0, 0, 0, 0.8);
+   height: 100%;
+   width: 100%;
+}
+
+main .popup-video iframe {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 5px;
+   border: 5px solid #fff;
+   object-fit: contain;
+}
+
+main .popup-video div {
+   position: absolute;
+   top: 5px;
+   right: 20px;
+   color: #fff;
+   font-weight: bolder;
+   z-index: 5;
+   cursor: pointer;
+}
+
+main .popup-video div img {
+   height: 50px;
+}
+
+@media (max-width: 768px) {
+   main .popup-video iframe {
+      width: 
+      80%;
+   }
+}

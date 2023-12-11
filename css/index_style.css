@@ -1,0 +1,217 @@
+/* MOBILE MENU */
+.menu-btn {
+   display: none;
+   position: relative;
+   top: 15px;
+   width: 40px;
+   height: 40px;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+}
+
+.menu-btn span {
+   position: absolute;
+   width: 30px;
+   height: 3px;
+   background-color: #fff;
+   left: 5px;
+   transition: transform 0.5s, opacity 0.5s, background-color 0.5s;
+}
+.menu-btn span:nth-child(1) {
+   transform: translateY(-10px);
+}
+.menu-btn span:nth-child(3) {
+   transform: translateY(10px);
+}
+header.open .menu-btn span:nth-child(2) {
+   opacity: 0;
+}
+header.open .menu-btn span:nth-child(1) {
+   transform: translateY(0) rotate(45deg);
+}
+header.open .menu-btn span:nth-child(3) {
+   transform: translateY(0) rotate(-45deg);
+}
+
+/* HEADER > NAV */
+.menu {
+   display: flex;
+   height: 100%;
+   align-items: center;
+   font-size: 1em;
+}
+.menu li {
+   display: inline-block;
+   list-style-type: none;
+   margin-right: 30px;
+}
+
+.menu a {
+   text-decoration: none;
+   color: #fff;
+}
+.menu li:hover{
+   transform: scale(1.1);
+   text-shadow: 5px 5px 5px #ff53b4;
+}
+
+/* MAIN */
+main {
+   background: url(../images/homepage.png) no-repeat;
+   background-position: top;
+   background-position-x: center;
+   background-position-y: top;
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   height: 70vh;
+   position: relative;
+   overflow: hidden;
+}
+
+/* MAIN > IMG */
+main p {
+   position: absolute;
+   overflow-clip-margin: content-box;
+   overflow: clip;
+   z-index: 4;
+   font-size: 0.85em;
+   font-weight: bold;
+   color: #000;
+}
+
+/* IMG >> lockers */
+main .lockers-btn {
+   width: 20%;
+   position: absolute;
+   right: 21%;
+   top: 5%;
+   transition: 1s;
+}
+main .lockers-btn:hover {
+   transform: scale(1.1);
+}
+
+/* MAIN > SPIDER */
+main .spider {
+   width: 50px;
+   height: 225px;
+   position: relative;
+   background-image: url(../images/spider.png);
+   background-repeat: no-repeat;
+   background-size: contain;
+   top: -500px;
+   left: 10px;
+   animation-name: spider-animation;
+   animation-duration: 5s;
+   animation-fill-mode: forwards;
+}
+
+@keyframes spider-animation {
+   0% {
+      top: -200%;
+   }
+   20% {
+      top: -20px
+   }
+   40% {
+      top: -60px
+   }
+   60% {
+      top: -30px;
+   }
+   80% {
+      top: -70px;
+   }
+   100% {
+      top: -60px;
+   }
+}
+
+
+
+@media (max-width: 1200px) {
+   .menu li {
+      margin-right: 15px;
+   }
+
+   .menu {
+      font-size: 0.8em;
+   }
+
+   main .spider {
+      width: 35px;
+   }
+
+   @keyframes spider-animation {
+      0% {
+         top: -200%;
+      }
+
+      20% {
+         top: -20px
+      }
+
+      40% {
+         top: -60px
+      }
+
+      70% {
+         top: -30px;
+      }
+      100% {
+         top: -50px;
+      }
+   }
+}
+@media (max-width: 768px) {
+   main {
+      background: url(../images/homepage_mobile.jpg) no-repeat;
+      background-position: top;
+      background-position-x: center;
+      background-position-y: top;
+      background-size: cover;
+      height: 700px;
+   }
+   .menu-btn {
+      display: block;
+   }
+   .menu {
+      display: block;
+      position: absolute;
+      left: -350px;
+      top: 0;
+      width: 350px;
+      padding: 70px 20px 20px 20px;
+      transition: transform 0.5s;
+   }
+   .menu li {
+      display: block;
+      background: #000;
+      font-size: 21px;
+      padding: 10px 100px;
+      margin-right: 0;
+      border: solid #fff 3px;
+      border-radius: 5px;
+   }
+   header.open .menu{
+      transform: translateX(100%);
+   }
+   main .spider {
+      display: none;
+   }
+
+   /* IMG >> lockers */
+   main .lockers-btn {
+      width: 70%;
+      position: absolute;
+      right: 15%;
+      top: 50%;
+      transition: 1s;
+   }
+
+   main .lockers-btn:hover {
+      transform: scale(1.1);
+   }
+}
