@@ -120,7 +120,7 @@ footer ul li img:hover {
    header .header-icon {
       display: block;
       position: relative;
-      left: 300px;
+      left: 500px;
    }
 }
 @media (max-width: 576px) {
