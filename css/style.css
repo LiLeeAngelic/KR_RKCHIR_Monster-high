@@ -31,7 +31,7 @@ header {
 /* HEADER > ICON */
 header .header-icon {
    display: flex;
-   align-items: center;
+   align-items: flex-end;
    font-size: 2.5em;
    cursor: pointer;
    text-decoration: none;
