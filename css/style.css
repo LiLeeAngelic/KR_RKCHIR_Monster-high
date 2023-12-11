@@ -119,6 +119,8 @@ footer ul li img:hover {
 @media (max-width: 768px) {
    header .header-icon {
       display: block;
+      position: relative;
+      left: 300px;
    }
 }
 @media (max-width: 576px) {
