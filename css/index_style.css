@@ -201,6 +201,9 @@ main .spider {
    main .spider {
       display: none;
    }
+   header .header-icon {
+      display: none;
+   }
 
    /* IMG >> lockers */
    main .lockers-btn {
